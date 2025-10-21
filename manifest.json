@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Odoo - Full Browser Activity Tracker",
+  "version": "1.0",
+  "description": "Tracks all URLs, Gmail activity, idle detection, and displays events.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "activeTab",
+    "scripting", 
+    "idle"
+  ],
+  "host_permissions": ["https://mail.google.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    { 
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Activity Tracker"
+  },
+  "externally_connectable": {
+    "matches": [
+      "https://www.odoo.com/*",
+      "https://odoo.com/*"
+    ]
+  }
+}

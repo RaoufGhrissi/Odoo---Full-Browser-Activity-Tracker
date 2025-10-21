@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Odoo Activity Tracker</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 10px; }
+    h2 { margin-top: 20px; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    th, td { border: 1px solid #ccc; padding: 4px 6px; text-align: left; font-size: 12px; }
+    th { background-color: #f0f0f0; }
+    .small { font-size: 11px; color: #555; }
+  </style>
+</head>
+<body>
+
+  <h2>Gmail - Composing</h2>
+  <table>
+    <thead>
+      <tr><th>Started</th><th>Ended</th><th>To</th><th>CC</th><th>BCC</th><th>Duration (s)</th></tr>
+    </thead>
+    <tbody id="gmailComposeBody"></tbody>
+  </table>
+
+  <h2>Gmail - Reading</h2>
+  <table>
+    <thead>
+      <tr><th>Tab Title</th><th>URL</th><th>Duration (s)</th></tr>
+    </thead>
+    <tbody id="gmailReadBody"></tbody>
+  </table>
+
+  <h2>Odoo</h2>
+  <table>
+    <thead>
+      <tr><th>App</th><th>URL</th><th>Duration (s)</th></tr>
+    </thead>
+    <tbody id="odooBody"></tbody>
+  </table>
+
+  <h2>Discord</h2>
+  <table>
+    <thead>
+      <tr><th>Type</th><th>Name</th><th>Tab Title</th><th>URL</th><th>Duration (s)</th></tr>
+    </thead>
+    <tbody id="discordBody"></tbody>
+  </table>
+
+  <script src="popup.js"></script>
+</body>
+</html>
