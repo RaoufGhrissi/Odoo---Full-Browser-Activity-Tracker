@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Activity Tracker</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background: #f4f5f7; color: #333; }
+    h2 { margin: 10px 0; padding-left: 10px; font-size: 16px; color: #222; }
+    .category { margin: 10px; background: #fff; border-radius: 8px; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    table { width: 100%; border-collapse: collapse; margin-top: 5px; }
+    th, td { padding: 5px 8px; text-align: left; border-bottom: 1px solid #eee; font-size: 13px; }
+    th { background: #f0f0f0; }
+    .small { font-size: 11px; color: #666; }
+  </style>
+</head>
+<body>
+  <h2>Activity Tracker</h2>
+  <div id="gmail" class="category">
+    <h2>Gmail</h2>
+    <table>
+      <thead><tr><th>Type</th><th>Tab</th><th>URL</th><th>Details</th><th>Duration(s)</th></tr></thead>
+      <tbody id="gmailBody"></tbody>
+    </table>
+  </div>
+
+  <div id="odoo" class="category">
+    <h2>Odoo</h2>
+    <table>
+      <thead><tr><th>App</th><th>Tab</th><th>URL</th><th>Project</th><th>Task</th><th>Duration(s)</th></tr></thead>
+      <tbody id="odooBody"></tbody>
+    </table>
+  </div>
+
+  <div id="discord" class="category">
+    <h2>Discord</h2>
+    <table>
+      <thead><tr><th>Type</th><th>Name</th><th>Tab</th><th>URL</th><th>Duration(s)</th></tr></thead>
+      <tbody id="discordBody"></tbody>
+    </table>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
